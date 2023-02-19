@@ -64,9 +64,6 @@ inline std::string Vehicle::getter(char info)
     return model;
 }
 
-struct ErrorOfType
-{
-        std::string message;
-};
+struct ErrorOfType { std::string message; };
 
 #endif //CAR_DEALER_VEHICLE_H
