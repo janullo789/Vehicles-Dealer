@@ -3,4 +3,4 @@ project(Car_Dealer)
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_executable(Car_Dealer main.cpp Vehicle.cpp MotorVehicle.cpp Bicycle.cpp)
+add_executable(Car_Dealer main.cpp Vehicle.cpp MotorVehicle.cpp Motorcycle.cpp Bicycle.cpp)
