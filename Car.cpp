@@ -1,18 +1,19 @@
 //
-// Created by Jan Skwarczenski on 26.02.2023.
+// Created by Jan Skwarczenski on 27.02.2023.
 //
+
+#include "Car.h"
 
 #include <iostream>
 
-#include "Motorcycle.h"
-
 using namespace std;
 
-Motorcycle::Motorcycle(char type, string model, string color, float price, float capacity, int mileage, int tank,
-                       float fuel, float fuelUsage, float power)
-                       : MotorVehicle(type, model, color, price, capacity, mileage, tank, fuel, fuelUsage, power) {}
+Car::Car(char type, string model, string color, float price, float capacity, int mileage, int tank, float  fuel,
+         float fuelUsage, float power, int numberOfDoors) : MotorVehicle(type, model, color, price, capacity, mileage,
+                                                                         tank, fuel, fuelUsage, power),
+                                                                         numberOfDoors(numberOfDoors) {}
 
-void Motorcycle::drive()
+void Car::drive()
 {
     string km;
     float s = fuelUsage / 100;
@@ -46,10 +47,10 @@ void Motorcycle::drive()
         cerr << m.message << endl;
     }
 
-    cout << "End of motorcycle ride" << endl;
+    cout << "End of car ride" << endl;
 }
 
-void Motorcycle::refuel()
+void Car::refuel()
 {
     string l;
     cout << "How many liters do you want to refuel? " << endl;
@@ -80,19 +81,18 @@ void Motorcycle::refuel()
         cerr << m.message << endl;
     }
 
-    cout << "End of motorcycle refuel" << endl;
+    cout << "End of car refuel" << endl;
 }
 
-void Motorcycle::printOn(ostream &o) const
+void Car::printOn(ostream &o) const
 {
     o << "Model: " << model << " Color: " << color << " Price: " << price << " Capacity: " << capacity << " Mileage: " <<
-      mileage << " Tank size: " << tank << " Fuel: " << fuel << " Fuel usage: " << fuelUsage << " Power: " << power << endl;
+      mileage << " Tank size: " << tank << " Fuel: " << fuel << " Fuel usage: " << fuelUsage << " Power: " << power <<
+      "Number of doors" << numberOfDoors << endl;
 }
 
-void Motorcycle::saveOn(ofstream &o) const
+void Car::saveOn(ofstream &o) const
 {
     o << type << " " << model << " " << color << " " << price << " " << capacity << " " << mileage << " " << tank <<
-      " " << fuel << " " << fuelUsage << " " << power << endl;
+      " " << fuel << " " << fuelUsage << " " << power << numberOfDoors << endl;
 }
-
-
