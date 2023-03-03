@@ -9,6 +9,9 @@
 #include <vector>
 
 #include "Vehicle.h"
+#include "Car.h"
+#include "Motorcycle.h"
+#include "Bicycle.h"
 
 class Factory
 {
@@ -16,6 +19,8 @@ public:
     Factory(float = 500000); //default budget of factory
 
     void order();
+    float powerMenu(int);
+    std::string colorMenu();
     void show();
     bool sell();
     void driveVehicle();

@@ -9,8 +9,6 @@
 #include <string>
 #include <fstream>
 
-enum COLOR {RED, GREEN, BLUE, YELLOW, PINK, BLACK, WHITE};
-
 class Vehicle
 {
 public:
@@ -19,7 +17,7 @@ public:
     virtual void refuel() = 0;
     void changePrice();
     void changeMileage();
-    void repaint(COLOR);
+    void repaint(std::string);
     friend std::ostream& operator<< (std::ostream& o, Vehicle const& b);
     friend std::ostream& operator<< (std::ofstream& o, Vehicle const& b);
     int controlTypeINT(std::string &k);
