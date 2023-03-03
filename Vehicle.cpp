@@ -11,8 +11,6 @@ Vehicle::Vehicle(char type, std::string model, std::string color, float price, f
 
 void Vehicle::changePrice() { price *= 0.9; }
 
-void Vehicle::changeMileage() { mileage /= 2; }
-
 void Vehicle::repaint(std::string newColor) { color = newColor; }
 
 std::ostream& operator<< (ostream& o, Vehicle const& b)

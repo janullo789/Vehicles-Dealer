@@ -16,7 +16,6 @@ public:
     virtual void drive() = 0;
     virtual void refuel() = 0;
     void changePrice();
-    void changeMileage();
     void repaint(std::string);
     friend std::ostream& operator<< (std::ostream& o, Vehicle const& b);
     friend std::ostream& operator<< (std::ofstream& o, Vehicle const& b);
@@ -37,7 +36,7 @@ protected:
 template <>
 inline int Vehicle::getter(char info)
 {
-    assert(info=='m');
+    assert(info=='ma');
     return mileage;
 }
 
@@ -58,7 +57,7 @@ inline float Vehicle::getter(char info)
 template <>
 inline std::string Vehicle::getter(char info)
 {
-    assert(info=='n');
+    assert(info=='m');
     return model;
 }
 

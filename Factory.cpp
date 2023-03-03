@@ -308,8 +308,8 @@ bool Factory::sell()
             cin >> nr;
         } while (!checkId(nr));
 
-        budgetFactory += parkingFactory[(nr - 1)]->getter<float>('c');
-        char checkType = parkingFactory[(nr - 1)]->getter<char>('r');
+        budgetFactory += parkingFactory[(nr - 1)]->getter<float>('p');
+        char checkType = parkingFactory[(nr - 1)]->getter<char>('t');
 
         auto it = next(begin(parkingFactory), (nr - 1));
 
