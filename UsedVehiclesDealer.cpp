@@ -42,5 +42,24 @@ void UsedVehiclesDealer::buy(std::vector<std::unique_ptr<Vehicle>> &listOfVehicl
         else
             cout << "Your budget does not allow you to buy this vehicle.";
     }
+}
 
+void UsedVehiclesDealer::sell()
+{
+    if(!parkingDealer.empty())
+    {
+        int no;
+        do
+        {
+            cout << "Enter number of car park for sale (1 - " << parkingDealer.size() << "):" << endl;
+            cin >> no;
+        } while (!checkId(no, parkingDealer));
+
+        budgetDealer+= 1.2*(parkingDealer[(no - 1)]->getter<float>('p'));
+
+        auto it = next(begin(parkingDealer), (no - 1));
+        vehicleForSell = move(*it);
+
+        parkingDealer.erase(it);
+    }
 }

@@ -301,17 +301,17 @@ bool Factory::sell()
 
     if(!parkingFactory.empty())
     {
-        int nr;
+        int no;
         do
         {
             cout << "Enter number of car park for sale (1 - " << parkingFactory.size() << "):" << endl;
-            cin >> nr;
-        } while (!checkId(nr));
+            cin >> no;
+        } while (!checkId(no));
 
-        budgetFactory += parkingFactory[(nr - 1)]->getter<float>('p');
-        char checkType = parkingFactory[(nr - 1)]->getter<char>('t');
+        budgetFactory += parkingFactory[(no - 1)]->getter<float>('p');
+        char checkType = parkingFactory[(no - 1)]->getter<char>('t');
 
-        auto it = next(begin(parkingFactory), (nr - 1));
+        auto it = next(begin(parkingFactory), (no - 1));
 
         if(checkType == 'M' || checkType == 'S')    //we only care about uploading the motor vehicle to the parkingCity vector
         {                                                   //because the car dealership can't buy a bike anyway
