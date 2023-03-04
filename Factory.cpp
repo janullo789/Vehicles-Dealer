@@ -338,15 +338,15 @@ void Factory::driveVehicle()
 {
     if(!parkingFactory.empty())
     {
-        int nr;
+        int no;
         do
         {
             cout << "Enter no. the parking space of the vehicle you want to drive: " << endl;
-            cin >> nr;
-        } while (!checkId(nr));
+            cin >> no;
+        } while (!checkId(no));
 
 
-        parkingFactory[(nr - 1)]->drive();
+        parkingFactory[(no - 1)]->drive();
     }
     else
         cout << "Your factory is empty" << endl;
@@ -356,14 +356,14 @@ void Factory::refuelVehicle()
 {
     if(!parkingFactory.empty())
     {
-        int nr;
+        int no;
         do
         {
             cout << "Enter no. parking space of the vehicle you want to refuel: " << endl;
-            cin >> nr;
-        } while (!checkId(nr));
+            cin >> no;
+        } while (!checkId(no));
 
-        parkingFactory[(nr - 1)]->refuel();
+        parkingFactory[(no - 1)]->refuel();
     }
     else
         cout << "Your factory is empty" << endl;
@@ -399,7 +399,7 @@ void Factory::save()
     unsigned int size = parkingFactory.size();
 
     ofstream fileP;
-    fileP.open("parkingFactorytxt", ofstream::out);
+    fileP.open("parkingFactory.txt", ofstream::out);
 
     for (unsigned int i = 0; i < size; i++)
         fileP << *(parkingFactory[i]);

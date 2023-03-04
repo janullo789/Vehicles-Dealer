@@ -10,6 +10,9 @@
 #include <iostream>
 
 #include "Vehicle.h"
+#include "Car.h"
+#include "Motorcycle.h"
+#include "Bicycle.h"
 
 class UsedVehiclesDealer
 {
