@@ -30,7 +30,7 @@ public:
     void save();
     void read();
     bool checkId(int);
-    std::unique_ptr<Vehicle> VehicleDeparting ;
+    std::unique_ptr<Vehicle> VehicleDeparting;
     unsigned int getSize();
 
 private:
