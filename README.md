@@ -26,7 +26,24 @@ The project was created for the **AGH object-oriented programming** course.
 
 **C++** using Libraries such as *vector, memory, fstream* and *iostream*.
 
-The program was written in accordance with the assumptions of object-oriented programming 
+The program was written in accordance with the assumptions of object-oriented programming
 
+## Installation
 
+1. Clone the repository:
+```
+git clone https://github.com/janullo789/Vehicles-Dealer.git
+```
+2. Go to the new folder:
+```
+cd Vehicles-Dealer
+```
+3. Complation of files
+```
+g++ main.cpp Vehicle.cpp MotorVehicle.cpp Motorcycle.cpp Bicycle.cpp Car.cpp Factory.cpp UsedVehiclesDealer.cpp Painter.cpp
+```
+4. Run a.exe
+```
+a.exe
+```
 
