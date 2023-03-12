@@ -96,7 +96,7 @@ void Factory::order()
                 {
                     cout << "Insert number of doors (3/5): " << endl;
                     cin >> numberOfDoors;
-                } while (numberOfDoors != '3' && numberOfDoors != '5');
+                } while (numberOfDoors != 3 && numberOfDoors != 5);
 
                 type = 'C';
 
@@ -110,7 +110,7 @@ void Factory::order()
                          "Sell your current vehicles!" << endl;
                 break;
 
-            case 2:
+            case '2':
                 do
                 {
                     cout << "Model of motorcycle:" << endl <<
@@ -176,7 +176,7 @@ void Factory::order()
                          "Sell your current vehicles!" << endl;
                 break;
 
-            case 3:
+            case '3':
                 do
                 {
                     cout << "Model of bicycle:" << endl <<
@@ -212,6 +212,7 @@ void Factory::order()
                 } while (choiceModel != '1' && choiceModel != '2' && choiceModel != '3' && choiceModel != '4');
 
                 color = colorMenu();
+                budgetFactory -= price * 0.7;
 
                 type = 'B';
 
@@ -230,7 +231,7 @@ void Factory::order()
     } while (choiceType != '1' && choiceType != '2' && choiceType != '3');
 }
 
-float Factory::powerMenu(int fType)
+float Factory::powerMenu(char fType)
 {
     float fPower;
     do
@@ -238,16 +239,16 @@ float Factory::powerMenu(int fType)
         cout << "Our company produce power engine between ";
         switch (fType)
         {
-            case 1:
+            case '1':
                 cout << "90 - 250 [HP]" << endl;
                 break;
-            case 2:
+            case '2':
                 cout << "10 - 50 [HP]" << endl;
                 break;
         }
         cout << "Select power engine" << endl;
         cin >> fPower;
-    } while (((fPower < 90 || fPower > 250) && fType == 1) || ((fPower < 10 || fPower > 50) && fType == 2));
+    } while (((fPower < 90 || fPower > 250) && fType == '1') || ((fPower < 10 || fPower > 50) && fType == '2'));
     return fPower;
 }
 

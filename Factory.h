@@ -19,7 +19,7 @@ public:
     Factory(float = 500000); //default budget of factory
 
     void order();
-    float powerMenu(int);
+    float powerMenu(char);
     std::string colorMenu();
     void show();
     bool sell();

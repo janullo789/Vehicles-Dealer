@@ -88,7 +88,7 @@ void Car::printOn(ostream &o) const
 {
     o << "Model: " << model << " Color: " << color << " Price: " << price << " Capacity: " << capacity << " Mileage: " <<
       mileage << " Tank size: " << tank << " Fuel: " << fuel << " Fuel usage: " << fuelUsage << " Power: " << power <<
-      "Number of doors" << numberOfDoors << endl;
+      " Number of doors:" << numberOfDoors << endl;
 }
 
 void Car::saveOn(ofstream &o) const

@@ -140,7 +140,11 @@ int main()
 
     }while(choice1 != '0');
 
+    f1.save();
+    d1.save();
+    saveParkingCity(parkingCity);
 
+    return 0;
 }
 
 void loadParkingCity(vector<unique_ptr<Vehicle>>& parking)
