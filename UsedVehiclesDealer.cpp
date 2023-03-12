@@ -33,7 +33,7 @@ void UsedVehiclesDealer::buy(std::vector<std::unique_ptr<Vehicle>> &listOfVehicl
             listOfVehicle.erase(it);
 
             float price = parkingDealer[(parkingDealer.size())-1]->getter<float>('p');
-            int mileage = parkingDealer[(parkingDealer.size())-1]->getter<int>('ma');
+            int mileage = parkingDealer[(parkingDealer.size())-1]->getter<int>('a');
             string model = parkingDealer[(parkingDealer.size())-1]->getter<string>('m');
 
             budgetDealer -= (price - mileage); //it is simplification, better solution is dependence based on exponential function

@@ -36,7 +36,7 @@ protected:
 template <>
 inline int Vehicle::getter(char info)
 {
-    assert(info=='ma');
+    assert(info=='a');
     return mileage;
 }
 
